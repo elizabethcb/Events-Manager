@@ -2,9 +2,10 @@
 <h2 class="single-event-title"><?php echo $event['name']; ?></h2>
 <div class="single-event-stuff">
 	<div class="single-event-left">
-		<span class="single-event-date"><?php echo $event['start_date']; ?></span>
+		<span class="single-event-date"><?php echo date("l F j, Y", strtotime($event['start_date'])); ?></span>
 		<br />
-		<?php echo $event['start_time']. ' - ' . $event['end_time'];
+		<?php echo date("g:i a", strtotime($event['start_date'] .' '. $event['start_time'])) 
+		. ' - ' . date("g:i a", strtotime($event['start_date'] .' '. $event['end_time']));
 		?><br />
 		<div class="single-event-location">
 			<div class="single-event-morestuff">Location: <a href="#">Map</a> <a href="#">Weather</a></div>

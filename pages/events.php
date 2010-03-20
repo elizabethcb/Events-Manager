@@ -1,22 +1,37 @@
+<table id="events-table">
+  <col id="col120" />
+  <col id="col340" />
+<?php $seendate = '';
+	$echoend = false;
+	foreach ($events as $event) {
+		if ($seendate != $event['start_date']) {
+       		echo '<tbody>';
+          	echo '<tr><th colspan="3" class="text-left"><h4 class="event-date">'.date("l F j, Y", strtotime($event['start_date'])).'</h4></th></tr>';
+          	$seendate = $event['start_date'];
+          	
+      	} else {
+      		$echoend = true;
+      	}
+    ?>
+      <tr>
+          <td><?php echo date("g:i a", strtotime($event['start_date'] .' '. $event['start_time'] ))
+          	. ' - ' . date("g:i a", strtotime($event['start_date'] .' '. $event['end_time'])) ?></td>
+          <td><a href="<?php bloginfo('url') ?>/events?event_id=<?php echo $event['event_id'] ?>" >
+          	<?php echo $event['name'] ?>
+          	</a></td>
+          <td><a href="<?php bloginfo('url') ?>/events?location_id=<?php echo $event['location_id']; ?>" >
+          	<?php echo $event['location_name'] ?>
+          	</a></td>
+      </tr>
+      <?php if ($echoend) {
+      		echo '</tbody>';
+      		$echoend = false;
+  		}
 
-<?php foreach ($events as $event) { ?>
-	<div class="event-listing" style="width:300px;">	
-		<span class="event-link">
-			<a href="<?php echo get_bloginfo('url') . '/events/?event_id=' . $event['event_id'] ?>" title="<?php echo $event['name']; ?>" />
-				<?php echo $event['name']; ?>
-			</a>
-		</span><br />
-		<span class="event-date"><?php echo $event['start_date']; 
-			// TODO don't hard set the format test here.  use variable.
-			if ( isset($event['end_time']) && $event['end_date'] != '0000-00-00' )
-				echo ' - ' . $event['end_date']; ?>
-		</span><br />
-		<span class="event-time"><?php echo $event['start_time'] . '-' . $event['end_time']; ?></span>
-		<br />
-		<span class="event-town"><?php echo $event['town']; ?></span><br />
-		<span style="font-size:xx-small">Date and time to be fixed</span>
-	</div>
-<?php } ?>
+	} 
+?>
+</table>
+
 <pre>
-<?php print_r($events) ?>
+<?php //print_r($events) ?>
 </pre>

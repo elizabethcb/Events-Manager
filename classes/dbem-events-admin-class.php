@@ -618,8 +618,15 @@ class DBEM_Events_Admin extends DBEM_Events {
 		}
 	} 
 	
-
-	
+	/***************************
+	 * Other stuff
+	*/
+	public function feedme($data) {
+		//echo "<pre>";
+		//print_r($data);
+		//echo "</pre>";
+		return $data;
+	}
 
 	
 } // End class

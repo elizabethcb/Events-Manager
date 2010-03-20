@@ -11,43 +11,55 @@
 <?php } ?>
 <form action="<?php echo get_bloginfo('url') . '/events/?submitevent=1' ?>">
 	<input type="hidden" name="front-action" value="submit-event" />
-	<div class="ev-messages right">
-		Description:
-		<textarea cols="32" rows="14">
-		Ok.  So Chrome shows this much narrower and shorter than Firefox.
-		</textarea>
+	<div class="right">
+		<div class="ev-timedate">
+			Start Date: <input type="text" size="10" class="ev-datetime" name="event[start_date]" /> 
+			End Date: <input type="text" size="10" name="event[end_date]" /> <br />
+			<b style="display:block; text-align:right; margin-right:20px;">(end date optional)</b><br />
+			Start Time: <input type="text" size="10" class="ev-datetime" name="event[start_time]" /> 
+			End Time: <input type="text" size="10" name="event[end_time]" /><br />
+			
+			<br />
+		</div>
+		<div class="ev-messages">
+		
+			Description:
+			<textarea>
+			</textarea>
+		</div>
 	</div>
 	<div class="left">
 
-	Name of Event: <br />
+	Name of Event:
 	<input type="text" name="event[name]" /> 
-	<br /><br />
-	Start Time: <input type="text" size="10" class="ev-datetime" name="event[start_time]" /> 
-	End Time: <input type="text" size="10" name="event[end_time]" /><br />
 	<br />
-	Start Date: <input type="text" size="10" class="ev-datetime" name="event[start_date]" /> 
-	End Date: <input type="text" size="10" name="event[end_date]" /> <br />
-	(end date optional)<br />
-	<br />
-	Location: <br />
-	(copy the code from the admin section)<br />
+	
+	Location: 
 	<input type="text" name="location[location_name]" /> <br />
-	Add fields for address etc if new.
-	<br />
-	Event Host's Name: <br />
-	(Provide dropdown/AJAX list again)<br />
+	
+	Address: 
+	<input type="text" name="location[address]" /> <br />
+	
+	City: <br />
+	<input type="text" name="location[city]" /> <br />
+	
+	State: 
+	<input type="text" name="location[state]" /> <br />
+	
+	
+	Event Host's Name: 
 	<input type="text" /> <br />
-	<br />
-	Event Phone: <br />
+	
+	Event Phone: 
 	<input type="text" /> <br />
-	<br />
-	Event Email: <br />
+	
+	Event Email: 
 	<input type="text" /> <br />
-	<br />
-	Event Website: <br />
+	
+	Event Website: 
 	<input type="text" /> <br />
-	<br />
-<div class="event-form-buttons right">Yeah.  There's no submit button.</div>
+	
+<div class="event-form-buttons"><input type="button" name="submit" value="submit this" /></div>
 </form>
 </div>
 <br class="clear" />

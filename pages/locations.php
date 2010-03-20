@@ -30,9 +30,9 @@
 		    list($shour, $smin, $ssec) = explode(':', $event['start_time']);
 		    list($ehour, $emin, $esec) = explode(':', $event['end_time']);
 		    $timestamp = mktime($shour, $smin, $ssec, $month, $day, $year);
-		    $date = date('D M j, Y', $timestamp);
-		    $time = date('g:ia', $timestamp);
-		    $edate = date('g:ia', mktime($ehour, $emin, $esec, $month, $day, $year));
+		    $date = date('j F, Y', $timestamp);
+		    $time = date('g:i a', $timestamp);
+		    $edate = date('g:i a', mktime($ehour, $emin, $esec, $month, $day, $year));
 		    
  		?>
  			

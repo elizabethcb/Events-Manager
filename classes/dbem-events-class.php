@@ -74,7 +74,7 @@ class DBEM_Events {
 		$where = implode ( " AND ", $conditions );
 		if ($where != "")
 			$where = " WHERE " . $where;
-		// TODO Clean up date stuff
+
 		$sql = "SELECT ev.event_id, 
 					ev.name,
 					ev.start_date,
