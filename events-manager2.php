@@ -578,7 +578,7 @@ function dbem_create_recurrence_table() {
 	$table_name = $wpdb->prefix.RECURRENCE_TBNAME;
 
 	if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
-		// oops.  interval is a reserved word in sql.
+		// oops.  interval is a reserved word in sql had to change the name to intervals.
 		$sql = "CREATE TABLE ".$table_name." (
 			recurrence_id mediumint(9) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 			event_id mediumint(9) NOT NULL,

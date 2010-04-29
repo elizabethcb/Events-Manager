@@ -233,7 +233,7 @@ class DBEM_Events_Admin extends DBEM_Events {
 				$unrec['byday'];
 			$recurrence['freq'] = $unrec['freq'];
 			
-			$recurrence['interval'] = $unrec['interval'] == "" ?  1 : $unrec['interval'];
+			$recurrence['intervals'] = $unrec['intervals'] == "" ?  1 : $unrec['intervals'];
 			$recurrence ['byweekno'] = $unrec['byweekno'];
 			$recurrence['end_date'] = $unrec['end_date']; //date( $this->loc_date_form['en'], $unrec['end_date']);
 			$repeated = true;

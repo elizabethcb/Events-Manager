@@ -93,19 +93,19 @@ $event ['rsvp'] ? $event_RSVP_checked = "checked='checked'" : $event_RSVP_checke
 								</p>
 								<p>
 									<?php _e ( 'Every', 'dbem' )?>
-									<input id="recurrence-interval" name='recurrence[interval]' size='2' value='<?php echo $event ['interval']; ?>'>
+									<input id="recurrence-intervals" name='recurrence[intervals]' size='2' value='<?php echo $event ['intervals']; ?>'>
 									</input>
-									<span class='interval-desc' id="interval-daily-singular">
+									<span class='intervals-desc' id="intervals-daily-singular">
 									<?php _e ( 'day', 'dbem' )?>
-									</span> <span class='interval-desc' id="interval-daily-plural">
+									</span> <span class='intervals-desc' id="intervals-daily-plural">
 									<?php _e ( 'days', 'dbem' ) ?>
-									</span> <span class='interval-desc' id="interval-weekly-singular">
+									</span> <span class='intervals-desc' id="intervals-weekly-singular">
 									<?php _e ( 'week', 'dbem' )?>
-									</span> <span class='interval-desc' id="interval-weekly-plural">
+									</span> <span class='intervals-desc' id="intervals-weekly-plural">
 									<?php _e ( 'weeks', 'dbem' )?>
-									</span> <span class='interval-desc' id="interval-monthly-singular">
+									</span> <span class='intervals-desc' id="intervals-monthly-singular">
 									<?php _e ( 'month', 'dbem' )?>
-									</span> <span class='interval-desc' id="interval-monthly-plural">
+									</span> <span class='intervals-desc' id="intervals-monthly-plural">
 									<?php _e ( 'months', 'dbem' )?>
 									</span> </p>
 								<p class="alternate-selector" id="weekly-selector">

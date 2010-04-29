@@ -25,12 +25,12 @@ class DBEM_Events {
 		
 		$this->opts = get_option('dbem');
 		$this->tables = array(
-			'events' 		=> 'dbem_events',
-			'recurrence'	=> 'dbem_recurrence',  
-			'locations'		=> 'dbem_locations',  
-			'bookings'		=> 'dbem_bookings',
-			'people'		=> 'dbem_people',  
-			'booking_ppl' 	=> 'dbem_bookings_people'
+			'events' 		=> 'dbem2_events',
+			'recurrence'	=> 'dbem2_recurrence',  
+			'locations'		=> 'dbem2_locations',  
+			'bookings'		=> 'dbem2_bookings',
+			'people'		=> 'dbem2_people',  
+			'booking_ppl' 	=> 'dbem2_bookings_people'
 		);
 		
 		if ($doi) 
@@ -88,7 +88,7 @@ class DBEM_Events {
 					loc.location_name,
 					loc.address,
 					loc.town,
-					rec.interval,
+					rec.intervals,
 					rec.byweekno,
 					rec.freq,
 					rec.byday,
@@ -137,7 +137,7 @@ class DBEM_Events {
 					loc.town,
 					loc.latitude,
 					loc.longitude,
-					rec.interval,
+					rec.intervals,
 					rec.byweekno,
 					rec.freq,
 					rec.byday,
